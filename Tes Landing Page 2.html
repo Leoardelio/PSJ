@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Landing Page</title>
+
+<meta name="description" content="WinHoki88 platform terpercaya dengan pengalaman terbaik, fitur lengkap, dan pelayanan cepat." />
+<meta name="keywords" content="WinHoki88, platform terpercaya, daftar sekarang, bonus member" />
+<link rel="canonical" href="winhoki88.com" />
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;background:#111;color:#fff;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+.container{width:min(1200px,92%);margin:auto;padding-left:16px;padding-right:16px}
+
+header{position:sticky;top:0;background:linear-gradient(0deg,#000,#444);border-bottom:1px solid rgba(255,255,255,.08);z-index:1000}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{color:gold;font-weight:700;font-size:22px}
+.menu{display:flex;gap:20px;list-style:none}
+
+.btn{
+  padding:12px 26px;
+  border-radius:999px;
+  font-weight:700;
+  display:inline-block;
+  border:1px solid #d8d8d8;
+  background:#1a1a1a;
+  color:#ffffff;
+  transition:background .2s ease,color .2s ease,border-color .2s ease;
+}
+.btn-gold{
+  background:linear-gradient(135deg,#c9961f,#f0c35e);
+  color:#111111;
+  border-color:#f0c35e;
+}
+.btn-green{
+  background:linear-gradient(135deg,#239653,#29cc6b);
+  color:#111111;
+  border-color:#29cc6b;
+  animation:pulseBtn 0.8s ease-in-out infinite;
+}
+
+@keyframes pulseBtn{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.12)}
+  100%{transform:scale(1)}
+}
+.btn-gold:hover{
+  background:linear-gradient(135deg,#ffea96,#ffcf33);
+  color:#000000;
+  border-color:#ffcf33;
+}
+.btn-green:hover{
+  background:linear-gradient(135deg,#76f0aa,#32d978);
+  color:#000000;
+  border-color:#32d978;
+}
+
+section{padding:16px 0}
+
+/* Countdown Promo section sticky */
+#promo-countdown{
+  position: sticky;
+  top: 0;
+  background: #111;
+  z-index: 999;
+  padding: 10px 0;
+}
+#promo-countdown h2 {
+  position: sticky;
+  top: 0;
+  background: #111; /* Make the background consistent with the rest of the page */
+  z-index: 999; /* Ensure it's on top of other elements */
+  padding: 10px 0; /* Optional, adjust padding for spacing */
+}
+
+#promo-banner{padding:0 0 20px}
+
+.promo-banner{max-width:860px;margin:auto;text-align:center}
+.promo-banner img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:20px;max-width:520px;margin:auto;display:block}
+
+.bonus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:30px}
+.bonus-card,.faq-item{
+  background:#1a1a1a;
+  border:1px solid rgba(255,255,255,.08);
+  padding:24px;
+  border-radius:20px;
+  text-align:center;
+}
+
+.countdown{display:flex;justify-content:center;gap:18px;margin:8px;flex-wrap:wrap}
+.count-box{
+  min-width:90px;
+  padding:10px;
+  border-radius:14px;
+  text-align:center;
+  background:linear-gradient(0deg,#111,#444);
+  border:1px solid #555;
+}
+.count-number{
+  font-size:28px;
+  font-weight:700;
+  color:#f3c76b;
+  display:block;
+  margin-bottom:6px;
+}
+.count-label{
+  font-size:12px;
+  letter-spacing:1px;
+  color:#aaa;
+  text-transform:uppercase;
+}
+
+#testimonials{padding-top:8px;padding-bottom:8px}
+.testimonial-wrap{overflow:hidden;margin-top:4px;padding:0 8px}
+.testimonial-track{
+  display:flex;
+  gap:24px;
+  width:max-content;
+  animation:marquee 28s linear infinite;
+  will-change:transform;
+}
+.testimonial-card{
+  width:320px;
+  min-height:230px;
+  padding:24px;
+  border-radius:18px;
+  background:linear-gradient(180deg,#2f2f2f,#1e1e1e);
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:0 12px 28px rgba(0,0,0,.35);
+  flex:0 0 auto;
+}
+.stars{color:#ffd54a;font-size:22px;letter-spacing:2px;margin-bottom:14px}
+.testimonial-text{font-style:italic;font-size:15px;line-height:1.7;color:#f1f1f1;min-height:90px}
+.testimonial-meta{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:18px}
+.testimonial-name{color:#2ecc71;font-weight:700}
+.testimonial-location{color:#aaa;font-size:14px;white-space:nowrap}
+@keyframes marquee{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-50%)}
+}
+
+.faq-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+
+footer{border-top:1px solid rgba(255,255,255,.08);padding:30px;text-align:center;color:#aaa;margin-top:60px}
+
+@media(max-width:900px){
+  .bonus-grid,.faq-grid{grid-template-columns:1fr}
+}
+
+@media(max-width:700px){
+  section{padding:24px 0}
+  .container{width:100%;padding-left:14px;padding-right:14px}
+  .nav{flex-wrap:wrap;gap:12px;justify-content:center}
+  .logo{width:100%;text-align:center;font-size:20px}
+  .menu{width:100%;justify-content:center;flex-wrap:wrap;gap:12px;font-size:13px}
+  .btn{padding:12px 18px;font-size:14px}
+  section{padding:56px 0}
+  .promo-banner{max-width:100%}
+  .promo-banner img{max-width:100%;width:100%;aspect-ratio:1/1;border-radius:18px}
+  .bonus-grid,.faq-grid{grid-template-columns:1fr;gap:16px}
+  .bonus-card,.faq-item{padding:18px}
+  .countdown{gap:10px}
+  .count-box{min-width:68px;padding:14px 8px}
+  .count-number{font-size:24px}
+  .testimonial-wrap{padding:0 4px}
+  .testimonial-track{gap:14px;animation:marquee 24s linear infinite}
+  .testimonial-card{width:260px;min-height:auto;padding:18px}
+  .stars{font-size:20px;margin-bottom:10px}
+  .testimonial-text{font-size:14px;line-height:1.6;min-height:auto}
+  .testimonial-meta{flex-direction:column;align-items:flex-start;gap:4px}
+  footer{padding:24px 14px}
+}
+
+.activity-popup{
+  position:fixed;
+  left:16px;
+  bottom:50px;
+  background:linear-gradient(135deg,#ffd54a,#ff9f1a);
+  border:1px solid #ffb347;
+  border-radius:12px;
+  padding:10px 14px;
+  font-size:13px;
+  color:#111111;
+  opacity:0;
+  transform:translateY(10px);
+  transition:opacity .3s ease, transform .3s ease;
+  z-index:9999;
+}
+.activity-popup.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.cta-section{padding:6px 0}
+.trust-bar{padding:4px 0}
+.trust-bar span{margin:0 4px}
+
+/* jackpot glow effect */
+#jackpot-value{background:#333;padding:10px;border:2px dotted gold;border-radius:50px;}
+
+#jackpot-value.glow{
+  border:2px dotted #fff;
+  text-shadow:0 0 8px #f3c76b,0 0 16px #f3c76b,0 0 24px #ffd54a;
+  transition:text-shadow .25s ease;
+}
+
+/* Member Counter Styling */
+#member-counter {
+  background-color: #222;
+  padding: 16px 0;
+}
+
+#member-counter h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+}
+
+#member-count {
+  font-size: 48px;
+  font-weight: 700;
+  color: #ff0;
+  margin-top: 8px;
+}
+
+#member-counter p {
+  color: #aaa;
+  font-size: 14px;
+  margin-top: 8px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 1 Logo -->
+<header>
+<div class="container nav" style="justify-content:center">
+<div class="logo">WinHoki88</div>
+</div>
+</header>
+
+<!-- 2 Countdown Promo -->
+<section id="promo-countdown">
+<div class="container" style="text-align:center">
+<h2>PROMO TERBATAS</h2>
+<div class="countdown">
+<div class="count-box"><span id="h" class="count-number">00</span><span class="count-label">Jam</span></div>
+<div class="count-box"><span id="m" class="count-number">03</span><span class="count-label">Menit</span></div>
+<div class="count-box"><span id="s" class="count-number">17</span><span class="count-label">Detik</span></div>
+</div>
+</div>
+</section>
+
+<!-- 3 Hero Banner -->
+<section id="promo-banner">
+<div class="container">
+<div class="promo-banner">
+<a href="winhoki88.com" target="_blank">
+<img src="https://i.ibb.co/ccf6mM1N/NB058.jpg" alt="Bonus New Member 100%" />
+</a>
+</div>
+</div>
+</section>
+
+<!-- 8 Member Counter -->
+<section id="member-counter">
+  <div class="container" style="text-align:center; color:white;">
+    <h2>ANGGOTA TERDAFTAR</h2>
+    <div id="member-count" style="font-size:32px; font-weight:700; color:#f3c76b;">0</div>
+    <p style="color:#aaa;">Gabung sekarang juga & jadi bagian dari ribuan pemain aktif yang menang setiap hari!</p>
+  </div>
+</section>
+
+<!-- 9 CTA Daftar -->
+<section class="cta-section">
+<div class="container" style="text-align:center">
+<a href="www.winhoki88.com" class="btn btn-green" target="_blank">DAFTAR SEKARANG</a>
+</div>
+</section>
+
+<!-- 10 Trust Bar -->
+<section class="trust-bar">
+<div class="container" style="text-align:center;font-size:14px;color:#bbb">
+<span>✔ Server Stabil</span> • 
+<span>✔ Withdraw Cepat</span> • 
+<span>✔ CS 24 Jam</span>
+</div>
+</section>
+
+<!-- 11 Jackpot Counter -->
+<section id="jackpot-section" style="padding:10px 0">
+<div class="container" style="text-align:center">
+<h2 style="margin-bottom:6px">JACKPOT HARI INI</h2>
+<div id="jackpot-value" style="font-size:32px;color:#f3c76b;font-weight:700">Rp 0</div>
+</div>
+</section>
+
+<!-- 12 Testimoni -->
+<section id="testimonials">
+<div class="container">
+<div class="testimonial-wrap">
+<div class="testimonial-track">
+
+<div class="testimonial-card">
+<div class="stars">★★★★★</div>
+<div class="testimonial-text">Main sebentar langsung dapat kemenangan besar. Platformnya stabil dan gampang dipakai.</div>
+<div class="testimonial-meta"><span class="testimonial-name">Rudi Hartono</span><span class="testimonial-location">Jakarta</span></div>
+</div>
+
+<div class="testimonial-card">
+<div class="stars">★★★★★</div>
+<div class="testimonial-text">Withdraw cepat dan prosesnya tidak ribet. Sudah beberapa kali menang di sini.</div>
+<div class="testimonial-meta"><span class="testimonial-name">Andi Saputra</span><span class="testimonial-location">Bandung</span></div>
+</div>
+
+<div class="testimonial-card">
+<div class="stars">★★★★☆</div>
+<div class="testimonial-text">Bonus member baru lumayan besar dan banyak pilihan game.</div>
+<div class="testimonial-meta"><span class="testimonial-name">Yoga Pratama</span><span class="testimonial-location">Surabaya</span></div>
+</div>
+
+<div class="testimonial-card">
+<div class="stars">★★★★★</div>
+<div class="testimonial-text">Customer service cepat membantu dan tampilannya enak di mobile.</div>
+<div class="testimonial-meta"><span class="testimonial-name">Kevin Wijaya</span><span class="testimonial-location">Medan</span></div>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+<!-- 13 Clear Section -->
+<section style="height:80px"></section>
+
+<!-- 14 Popup Activity -->
+<div id="activity-popup" class="activity-popup"></div>
+
+<!-- 15 Sticky CTA -->
+<a href="www.winhoki88.com" target="_blank" style="position:fixed;left:0;right:0;bottom:0;background:linear-gradient(0deg,#105f0a,#29cc6b);color:#111;font-weight:700;text-align:center;padding:14px;z-index:9998;text-decoration:none">DAFTAR SEKARANG</a>
+
+<script>
+
+// countdown promo
+const end = new Date().getTime() + 198000;
+setInterval(()=>{ let now=new Date().getTime(); let diff=end-now;if(diff<0)diff=0; let h=Math.floor(diff/(1000*60*60)); let m=Math.floor((diff%(1000*60*60))/(1000*60)); let s=Math.floor((diff%(1000*60))/1000); document.getElementById('h').innerText=String(h).padStart(2,'0'); document.getElementById('m').innerText=String(m).padStart(2,'0'); document.getElementById('s').innerText=String(s).padStart(2,'0'); },500);
+
+// popup activity
+const popup=document.getElementById('activity-popup');
+const messages=[ "1 user baru bergabung", "Eth****97 melakukan withdraw Rp1.300.000", "Adi****21 melakukan deposit Rp200.000", "Riz****88 melakukan withdraw Rp850.000", "Den****44 melakukan deposit Rp150.000", "Leo****72 melakukan withdraw Rp2.400.000", "Han****31 melakukan deposit Rp300.000", "Bag****19 melakukan withdraw Rp750.000", "Fer****55 melakukan deposit Rp250.000", "Jef****20 melakukan withdraw Rp1.050.000", "And****64 melakukan deposit Rp100.000", "Vin****90 melakukan withdraw Rp3.200.000", "1 user baru bergabung", "1 user baru bergabung", "1 user baru bergabung", "1 user baru bergabung", "1 user baru bergabung", "1 user baru bergabung"];
+function showPopup(){
+const text=messages[Math.floor(Math.random()*messages.length)];
+popup.textContent=text;
+popup.classList.add('show');
+setTimeout(()=>{popup.classList.remove('show');},3000);
+}
+setTimeout(showPopup,1200);
+setInterval(showPopup,4500);
+
+// animated jackpot
+const jackpotEl = document.getElementById('jackpot-value');
+let jackpotCurrent = 3128071695;
+function formatRupiah(num){ return 'Rp ' + Math.floor(num).toLocaleString('id-ID'); }
+jackpotEl.textContent = formatRupiah(jackpotCurrent);
+setInterval(() => { const increase = Math.floor(Math.random() * 700) + 100; jackpotCurrent += increase; jackpotEl.textContent = formatRupiah(jackpotCurrent); jackpotEl.classList.add('glow'); setTimeout(()=>{ jackpotEl.classList.remove('glow'); },250); },500);
+
+// Member Counter
+let memberCount = 16217; // Set initial member count to 16,217
+document.getElementById('member-count').innerText = memberCount; // Display initial value
+
+function updateMemberCount() {
+  memberCount += Math.floor(Math.random() * 9) + 1;  // Increment by a random number between 1 and 9
+  document.getElementById('member-count').innerText = memberCount;
+}
+
+// Update the member count every second (2500ms)
+setInterval(updateMemberCount, 2500);
+
+</script>
+
+</body>
+</html>
